@@ -1,10 +1,11 @@
 import CartItem from './CartItem';
+import '../styles/cart.css';
 
 const Cart = ({ cart, updateQuantity }) => {
   return (
-    <div>
+    <div className='cart'>
       <h2>Cart</h2>
-      <div className='cart'>
+      <div>
         {cart.map((cartItem) => (
           <CartItem
             key={cartItem.id}

@@ -1,8 +1,8 @@
 const PlantCard = ({ plant, addCartItem }) => {
   return (
-    <div>
+    <div className='plant-card'>
       <h1>{plant.image}</h1>
-      <h2>{plant.name}</h2>
+      <h3>{plant.name}</h3>
       <button onClick={() => addCartItem(plant)}>Add to Cart</button>
     </div>
   );

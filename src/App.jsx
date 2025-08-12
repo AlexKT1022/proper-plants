@@ -26,6 +26,8 @@ const App = () => {
 
     if (targetItem.count + num <= 0) {
       removeItem(item);
+    } else if (targetItem.count + num > 20) {
+      return;
     } else {
       targetItem.count += num;
 
@@ -45,8 +47,8 @@ const App = () => {
         <h1>Proper Plants</h1>
       </header>
       <main>
-        <PlantGrid className='plant-grid' addCartItem={addCartItem} />
-        <Cart className='cart' cart={cart} updateQuantity={updateQuantity} />
+        <PlantGrid addCartItem={addCartItem} />
+        <Cart cart={cart} updateQuantity={updateQuantity} />
       </main>
     </>
   );

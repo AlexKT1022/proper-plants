@@ -1,0 +1,29 @@
+.cart {
+  grid-column: 2;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.cart-item {
+  width: 100%;
+  padding-bottom: 5px;
+}
+
+.cart-item:not(:last-child) {
+  border-bottom: 2px solid whitesmoke;
+}
+
+.cart-item button {
+  width: 20%;
+}
+
+.cart-item-quantity {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-quantity-element {
+  flex-grow: 1;
+  text-align: center;
+}

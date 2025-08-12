@@ -1,14 +1,24 @@
 const CartItem = ({ item, updateQuantity }) => {
   return (
-    <div>
+    <div className='cart-item'>
       <p>
         {item.image}
         {item.name}
       </p>
-      <div>
-        <button onClick={() => updateQuantity(item, -1)}>-</button>
-        {item.count}
-        <button onClick={() => updateQuantity(item, 1)}>+</button>
+      <div className='cart-item-quantity'>
+        <button
+          className='item-quantity-element'
+          onClick={() => updateQuantity(item, -1)}
+        >
+          -
+        </button>
+        <p className='item-quantity-element'>{item.count}</p>
+        <button
+          className='item-quantity-element'
+          onClick={() => updateQuantity(item, 1)}
+        >
+          +
+        </button>
       </div>
     </div>
   );

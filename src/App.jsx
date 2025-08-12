@@ -1,5 +1,5 @@
-import Cart from './components/Cart';
 import PlantGrid from './components/PlantGrid';
+import Cart from './components/Cart';
 
 export default function App() {
   return (

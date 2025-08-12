@@ -1,11 +1,13 @@
 import PLANTS from '../data/plants';
+import PlantCard from './PlantCard';
 
 const PlantGrid = () => {
-  console.log(PLANTS);
-
   return (
     <>
       <h2>Plants</h2>
+      {PLANTS.map((plant, index) => (
+        <PlantCard key={index} plant={plant} />
+      ))}
     </>
   );
 };

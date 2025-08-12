@@ -1,4 +1,4 @@
-const CartItem = ({ item }) => {
+const CartItem = ({ item, updateQuantity }) => {
   return (
     <div>
       <p>
@@ -6,9 +6,9 @@ const CartItem = ({ item }) => {
         {item.name}
       </p>
       <div>
-        <button>-</button>
+        <button onClick={() => updateQuantity(item, -1)}>-</button>
         {item.count}
-        <button>+</button>
+        <button onClick={() => updateQuantity(item, 1)}>+</button>
       </div>
     </div>
   );

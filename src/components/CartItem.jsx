@@ -1,4 +1,8 @@
-const CartItem = ({ item, updateQuantity }) => {
+import { useCart } from '../context/CartContext';
+
+const CartItem = ({ item }) => {
+  const { updateQuantity } = useCart();
+
   return (
     <div className='cart-item'>
       <p>

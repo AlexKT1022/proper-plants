@@ -1,4 +1,8 @@
-const PlantCard = ({ plant, addCartItem }) => {
+import { useCart } from '../context/CartContext';
+
+const PlantCard = ({ plant }) => {
+  const { addCartItem } = useCart();
+
   return (
     <div className='plant-card'>
       <h1>{plant.image}</h1>
